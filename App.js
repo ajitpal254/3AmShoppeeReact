@@ -1,21 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View,ScrollView} from 'react-native';
 import Header from './components/Header';
 import Products from './components/Products';
 import SearchBarClass from './components/SearchBarClass';
+import About from './components/About';
+import Product2 from "./components/Product2";
+import ContactUs from './components/ContactUs';
 
 
 const App = () => {
   return (
 
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
 
         <Header />
         <SearchBarClass />
         <Products />
+        <Product2 />
+        <Text style={styles.line}>_________________________________________________________________________________________</Text>
+        <About />
+        <ContactUs />
       <StatusBar style="auto" />
-    </View>
+    </ScrollView>
 
   );
 }
@@ -23,9 +30,13 @@ const App = () => {
 const styles = StyleSheet.create({
  container: {
      flex:1,
-     paddingTop: 40,
-     backgroundColor:'lightgrey'
- }
+     backgroundColor: 'pink',
+     marginHorizontal: 20,
 
+ },
+line:{
+     fontSize: 40,
+     paddingTop:60,
+}
 });
 export default App;

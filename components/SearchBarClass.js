@@ -1,11 +1,14 @@
 import React from 'react';
-import {View, Text,StyleSheet,Button,TextInput} from 'react-native';
+import {View, Text, StyleSheet, Button, TextInput, TouchableOpacity} from 'react-native';
 
 const SearchBarClass = () =>{
     return(
         <View style ={styles.container}>
             <TextInput style={styles.input} placeholder="Type to search.."></TextInput>
-            <Button style={styles.search}>Search</Button>
+
+            <TouchableOpacity activeOpacity={0.95} style={styles.button}>
+                <Text style={styles.text}>Search</Text>
+            </TouchableOpacity>
         </View>
 
     );
@@ -14,16 +17,28 @@ const styles = StyleSheet.create({
     container:{
 
         flexDirection: 'row',
-        paddingLeft: 20,
+        paddingLeft: 1250,
+        textAlign: 'right',
     },
     input: {
+        backgroundColor: 'white',
         borderWidth:1,
-        width: 100,
+        height:30,
+        width: 150,
+        fontColor: 'black',
+        fontSize: 16,
 
     },
-    search:{
-      buttoncolor:'blue',
-        width: 100,
-    }
+    button: {
+        borderWidth:1,
+        flexDirection: 'row',
+        height: 30,
+        width: 50,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'center',
+
+        elevation:3,
+    },
 })
 export default SearchBarClass;
