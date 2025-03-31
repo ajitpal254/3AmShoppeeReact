@@ -1,0 +1,27 @@
+user:{
+    _id,
+    cart: [
+        {
+            id: cart_item_id,
+            quantity: 3,
+            item: {
+                name,
+                color,
+                type
+            },
+        },
+        {
+            id: cart_item_id,
+            quantity: 1,
+            item: {
+                name,
+                color,
+                type
+            },
+        },
+        {
+            id: cart_item_id,
+            quantity: 1,
+            item: {
+                name,
+

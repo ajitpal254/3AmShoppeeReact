@@ -1,25 +1,34 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "3amfinalshop",
+  "version": "1.0.0",
+  "description": "mern app",
+  "main": "server.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "data:import": "node backend/seeders.js",
+    "data:destroy": "node backend/seeders.js -d"
   },
+  "author": "3AM",
+  "license": "MIT",
   "dependencies": {
-    "expo": "~40.0.0",
-    "expo-status-bar": "~1.0.3",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
-    "react-native-web": "~0.13.12",
-    "react-native-vector-icons": "^6.6.0",
-    "uuidv4": "^6.0.2",
-    "react-native-elements": "^3.0.0"
+    "admin-bro": "^3.4.0",
+    "admin-bro-expressjs": "^2.1.1",
+    "admin-bro-mongoose": "^0.5.2",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jwt-decode": "^3.1.2",
+    "mongoose": "^5.12.3",
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
-  },
-  "private": true
+    "bcrypt": "^5.0.1"
+  }
 }
