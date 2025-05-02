@@ -14,9 +14,9 @@ phases:
       - docker login -u $ajitpal353 -p $Navraaj@12
   build:
     commands:
-      - echo Build phase: Building frontend Docker image...
+      - "echo Build phase: Building frontend Docker image..."
       - "docker build -t frontend-image ./frontend"
-      - echo Build phase: Building backend Docker image...
+      - "echo Build phase: Building backend Docker image..."
       - "docker build -t backend-image ./backend"
   post_build:
     commands:
