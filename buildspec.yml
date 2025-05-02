@@ -4,25 +4,20 @@ phases:
     runtime-versions:
       nodejs: 14
     commands:
-      - echo Installing dependencies...
       - npm install
       - npm install --prefix frontend
   pre_build:
     commands:
-      - "echo Pre-build phase: Logging into Docker registry if needed..."
-      # Uncomment and update the following line if Docker login is required.
-      - docker login -u $ajitpal353 -p $Navraaj@12
+      - echo Pre-build phase
   build:
     commands:
-      - "echo Build phase: Building frontend Docker image..."
-      - "docker build -t frontend-image ./frontend"
-      - "echo Build phase: Building backend Docker image..."
-      - "docker build -t backend-image ./backend"
+      - echo Build phase
+      - npm run build --prefix frontend
   post_build:
     commands:
       - echo Post-build phase
 artifacts:
   files:
-    - backend/**/*
-    - frontend/build/**/*
+    - backend/**/* 
+    - frontend/build/**/* 
   base-directory: .
