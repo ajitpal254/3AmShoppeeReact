@@ -9,7 +9,10 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
     "data:import": "node backend/seeders.js",
-    "data:destroy": "node backend/seeders.js -d"
+    "data:destroy": "node backend/seeders.js -d",
+    "setup": "concurrently \"cd frontend && npm install\" \"cd backend && npm install\" && npm install && npm run dev"
+
+
   },
   "author": "3AM",
   "license": "MIT",
