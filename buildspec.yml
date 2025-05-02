@@ -9,9 +9,9 @@ phases:
       - npm install --prefix frontend
   pre_build:
     commands:
-      - echo Pre-build phase: Logging into Docker registry if needed...
+      - "echo Pre-build phase: Logging into Docker registry if needed..."
       # Uncomment and update the following line if Docker login is required.
-      # - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - docker login -u $ajitpal353 -p $Navraaj@12
   build:
     commands:
       - echo Build phase: Building frontend Docker image...
