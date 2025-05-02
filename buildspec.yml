@@ -20,7 +20,6 @@ phases:
   post_build:
     commands:
       - echo Post-build phase
-      - npm run dev
 
 artifacts:
   files:
