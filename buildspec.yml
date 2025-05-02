@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
@@ -6,19 +7,23 @@ phases:
     commands:
       - npm install
       - npm install --prefix frontend
+
   pre_build:
     commands:
       - echo Pre-build phase
+
   build:
     commands:
       - echo Build phase
       - npm run build --prefix frontend
-    post_build:
-      commands:
-        - echo Post-build phase
-        - npm run dev
-  artifacts:
-    files:
-      - backend/**/*
-      - frontend/build/**/*
-    base-directory: .
+
+  post_build:
+    commands:
+      - echo Post-build phase
+      - npm run dev
+
+artifacts:
+  files:
+    - backend/**/*
+    - frontend/build/**/*
+  base-directory: .
