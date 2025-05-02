@@ -13,10 +13,10 @@ phases:
     commands:
       - echo Build phase
       - npm run build --prefix frontend
-    post_build:
-      commands:
-        - echo Post-build phase
-        - npm run dev
+  post_build:
+    commands:
+      - echo Post-build phase
+      - npm run dev
   artifacts:
     files:
       - backend/**/*
