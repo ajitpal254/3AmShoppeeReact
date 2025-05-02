@@ -17,5 +17,6 @@ phases:
       - echo Post-build phase
 artifacts:
   files:
+    - backend/**/* 
     - frontend/build/**/* 
-  base-directory: frontend/build
+  base-directory: .
