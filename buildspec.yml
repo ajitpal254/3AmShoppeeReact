@@ -15,9 +15,9 @@ phases:
   build:
     commands:
       - echo Build phase: Building frontend Docker image...
-      - docker build -t frontend-image ./frontend
+      - "docker build -t frontend-image ./frontend"
       - echo Build phase: Building backend Docker image...
-      - docker build -t backend-image ./backend
+      - "docker build -t backend-image ./backend"
   post_build:
     commands:
       - echo Post-build phase
