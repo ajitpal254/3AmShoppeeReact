@@ -23,7 +23,8 @@ import AdminDeleteConfirm from "./components/AdminDeleteConfirm";
 
 
 function App() {
-
+  const env = process.env.NODE_ENV;
+  console.log("Running in", env, "mode");
     const [loggedIn, setLoggedIn] = useState(false)
 
   return (
@@ -38,7 +39,7 @@ function App() {
               <Route path="/app/SignUp" component={SignUp} exact />
                 <Route path="/cart" component={CartScreen} exact  />
             <Route path="/" component={HomeScreen} exact />
-            <Route path="/product/:id" component={ProductDetails}  />
+            <Route path="/products/:id" component={ProductDetails}  />
             <Route path="/products/upload" component={Admin} />
             <Route path="/cart/:id" component={DeleteConfirm} />
             <Route path="/admin/delete" component={AdminDeleteScreen} />
